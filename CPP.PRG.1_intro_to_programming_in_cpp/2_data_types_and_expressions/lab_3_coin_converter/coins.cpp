@@ -49,28 +49,22 @@ int main(){
 
 	int total = dollars*100 + cents;
 
+	//Quarters
 	int quarters = total/quarterVal;
 	int remainder = total - (quarters* quarterVal);
-	//cout << "remainder: " << remainder << endl;
-	//cout << quarters << endl;
 	
-	
+	//Dimes
 	int dimes = remainder / dimeVal;
 	remainder = remainder - (dimes*dimeVal);
-	//cout << "remainder (after dimes): " << remainder << endl;
-	//cout << dimes << endl;
 
+	// Nickels
 	int nickels = remainder / nickelVal;
 	remainder = remainder - (nickels*nickelVal);
-	//cout << "remainder (after nickels): " << remainder << endl;
-	//cout << nickels << endl;
 
+	// Pennies
 	int pennies = remainder / pennyVal;
-	remainder = remainder - (pennies*pennyVal);
-	//cout << "remainder (after pennies): " << remainder << endl;
-	//cout << pennies << endl;
 
-
+	//Print results
 	cout << "The coins are " 
 	<< quarters << " quarters, " 
 	<< dimes << " dimes, " 
